@@ -30,6 +30,9 @@ header {
   justify-content: center;
   overflow: hidden;
 }
+h5 {
+  font-size: 40px;
+}
 
 .nav {
   position: absolute;
@@ -188,7 +191,7 @@ section {
 
 .cv {
   position: relative;
-  background-image: url("images/hero-main.jpg");
+  background-image: url("images/basil.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -210,6 +213,24 @@ section {
 
 .cv-section .cv-item {
   animation: fadeInUp 0.5s ease-out;
+}
+
+.cv ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: justify;
+}
+
+h4,
+h3 {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.cv-content p {
+  text-align: left;
+  font-size: 20px;
 }
 
 @keyframes fadeInUp {
@@ -259,21 +280,8 @@ section {
   z-index: 2;
 }
 
-.contact::before {
-  content: "";
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-  background: url("images/hero-image.jpg") bottom right/200px no-repeat;
-  opacity: 0.15;
-  pointer-events: none;
-  z-index: 0;
-}
-
 .contact h2 {
-  font-size: 2.5rem;
+  font-size: 40px;
   color: var(--deep-blue);
   margin-bottom: 10px;
 }
