@@ -230,13 +230,53 @@ section {
   letter-spacing: 1px;
 }
 
-footer {
-  background-color: var(--dark-gray);
-  color: var(--white);
-  padding: 30px 0;
-  text-align: center;
+.contact-info {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: var(--dark-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-footer p {
-  font-size: 1rem;
+.contact-info p {
+  background: var(--mint-green);
+  padding: 12px 25px;
+  border-radius: 30px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+.footer {
+  background: url("images/hero.jpg") bottom/cover no-repeat;
+  height: 250px; /* adjust height as needed */
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  border-top: 5px dotted var(--hot-pink);
+}
+
+.footer-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* darkens image for better contrast */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0 20px;
+}
+
+.footer span {
+  font-size: 1.3rem;
 }
