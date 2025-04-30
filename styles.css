@@ -1,13 +1,8 @@
 :root {
   --vibrant-pink: #ff007f;
-  --neon-orange: #ff6f00;
-  --bright-yellow: #ffea00;
-  --vibrant-turquoise: #00bcd4;
-  --mint-green: #2ed4b1;
   --light-gray: #f4f7fa;
   --dark-gray: #333;
   --white: #fff;
-  --accent-color: #ff5722;
 }
 
 * {
@@ -26,7 +21,7 @@ body {
 header {
   position: relative;
   height: 100vh;
-  background: url("images/hero-image.jpg") 60% 80% / cover no-repeat;
+  background: url("images/hero-main.jpg") top / cover no-repeat;
   background-attachment: fixed;
   color: var(--white);
   text-align: center;
@@ -38,15 +33,24 @@ header {
 
 .nav {
   position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 30px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 10;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 .nav ul {
   display: flex;
+  justify-content: center;
   gap: 40px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav ul li a {
@@ -55,11 +59,29 @@ header {
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 1px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav ul li a:hover {
   color: var(--vibrant-pink);
+
+  border-radius: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .hero-content h1 {
@@ -69,7 +91,7 @@ header {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--mint-green);
+  color: var(--light-gray);
 }
 
 .hero-content p {
@@ -92,7 +114,7 @@ header {
 }
 
 .btn:hover {
-  background-color: var(--accent-color);
+  background-color: var(--dark-gray);
   transform: scale(1.1);
 }
 
@@ -164,93 +186,115 @@ section {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-.cv-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: var(--light-gray);
-  border-radius: 10px;
-}
-
-.cv-section {
-  text-align: left;
-  margin-bottom: 40px;
-}
-
-.cv-section h3 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--vibrant-pink);
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 1px;
-}
-
-.cv-section ul {
-  list-style: none;
-}
-
-.cv-section ul li {
-  font-size: 1.1rem;
-  line-height: 1.8;
+.cv {
+  position: relative;
+  background-image: url("images/hero-main.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 20px;
+  color: #fff;
+  z-index: 0;
 }
 
 .cv-item {
-  background-color: var(--soft-gray);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
   padding: 20px;
   margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.cv-item h4 {
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--dark-gray);
-  font-family: "Bebas Neue", sans-serif;
+.cv-section .cv-item {
+  animation: fadeInUp 0.5s ease-out;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  font-size: 1.1rem;
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.contact-form button {
-  padding: 15px 40px;
-  background-color: var(--neon-orange);
-  color: var(--white);
-  font-weight: 700;
-  border-radius: 30px;
-  cursor: pointer;
-  border: none;
-  letter-spacing: 1px;
+@media (max-width: 768px) {
+  .cv-header h2 {
+    font-size: 2rem;
+  }
+
+  .cv-item {
+    padding: 15px;
+  }
 }
 
-.contact-info {
-  margin-top: 30px;
+.contact {
+  background-color: var(--mint-green);
+  padding: 60px 20px;
+  border-top: 5px solid var(--hot-pink);
+}
+.contact {
+  position: relative;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.85)
+    ),
+    url("images/hero-image.jpg") center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: url("images/hero-image.jpg") bottom right/200px no-repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: var(--deep-blue);
+  margin-bottom: 10px;
+}
+
+.contact-tagline {
   font-size: 1.2rem;
   color: var(--dark-gray);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  margin-bottom: 30px;
+  font-style: italic;
 }
 
 .contact-info p {
-  background: var(--mint-green);
-  padding: 12px 25px;
-  border-radius: 30px;
-  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
-  font-weight: 600;
-  transition: transform 0.2s ease;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--hot-pink);
 }
+
 .footer {
-  background: url("images/hero.jpg") bottom/cover no-repeat;
-  height: 250px; /* adjust height as needed */
+  background: var(--dark-gray);
+  height: 250px;
   position: relative;
   color: white;
   display: flex;
@@ -262,7 +306,7 @@ section {
 }
 
 .footer-overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* darkens image for better contrast */
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
   display: flex;
