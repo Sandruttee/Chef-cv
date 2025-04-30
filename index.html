@@ -17,7 +17,8 @@
   <body>
     <header class="header">
       <nav class="nav">
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
 
@@ -35,21 +36,6 @@
         </div>
       </div>
     </header>
-
-    <div class="hamburger-menu" id="hamburger-menu">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-
-    <nav class="nav" id="mobile-nav">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
 
     <section class="about" id="about">
       <div class="about-content">
@@ -336,12 +322,9 @@
       </div>
     </footer>
     <script>
-      const hamburger = document.getElementById("hamburger-menu");
-      const mobileNav = document.getElementById("mobile-nav");
-
-      hamburger.addEventListener("click", () => {
-        mobileNav.classList.toggle("active");
-      });
+      function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("show");
+      }
     </script>
   </body>
 </html>
