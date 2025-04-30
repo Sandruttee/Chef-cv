@@ -338,17 +338,112 @@ h3 {
   font-size: 20px;
 }
 
-@media (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    gap: 20px;
+@media (max-width: 968px) {
+  .hero-content h1 {
+    font-size: 40px;
   }
 
-  .cv-header h2 {
-    font-size: 2rem;
+  .hero-content p,
+  .btn,
+  .hero-para,
+  .about-me,
+  .contact-me,
+  .contact-info p,
+  .cv-content p {
+    font-size: 16px;
+  }
+
+  .glass-container {
+    padding: 20px;
+    margin-bottom: 60px;
+  }
+
+  .btn {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  .gallery-images {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-items {
+    grid-template-columns: 1fr;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cv-header h2,
+  .gallery-header {
+    font-size: 40px;
+  }
+
+  h5 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .contact h2 {
+    font-size: 30px;
+  }
+
+  .footer p,
+  .footer span {
+    font-size: 16px;
   }
 
   .cv-item {
     padding: 15px;
+  }
+
+  .nav {
+    padding: 10px 15px;
+  }
+
+  /* Adjustments for screens <= 480px */
+  @media (max-width: 480px) {
+    .hero-content h1 {
+      font-size: 30px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      font-size: 16px;
+    }
+
+    .nav ul li a {
+      font-size: 18px;
+    }
+
+    .contact h2 {
+      font-size: 24px;
+    }
+
+    .cv-header h2,
+    .gallery-header {
+      font-size: 32px;
+    }
+
+    h5 {
+      font-size: 20px;
+    }
+
+    .about-me,
+    .contact-me,
+    .hero-para {
+      font-size: 14px;
+    }
+
+    footer {
+      height: auto;
+    }
   }
 }
