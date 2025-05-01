@@ -13,15 +13,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
-      <nav class="nav">
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        <ul class="nav-links" id="navLinks">
+      <nav class="navbar">
+        <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-
           <li><a href="#cv">CV</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -321,10 +323,5 @@
         </p>
       </div>
     </footer>
-    <script>
-      function toggleMenu() {
-        document.getElementById("navLinks").classList.toggle("show");
-      }
-    </script>
   </body>
 </html>

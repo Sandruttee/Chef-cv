@@ -60,7 +60,7 @@ h5 {
   font-style: italic;
 }
 
-.nav {
+.navbar {
   position: absolute;
   top: 0;
   left: 0;
@@ -71,9 +71,12 @@ h5 {
   z-index: 10;
   opacity: 0;
   animation: fadeIn 1s forwards;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav ul {
+.navbar ul {
   display: flex;
   justify-content: center;
   gap: 80px;
@@ -82,7 +85,7 @@ h5 {
   padding: 0;
 }
 
-.nav ul li a {
+.navbar ul li a {
   text-decoration: none;
   color: var(--white);
   font-size: 20px;
@@ -92,7 +95,7 @@ h5 {
   font-family: var(--secondary-font);
 }
 
-.nav ul li a:hover {
+.navbar ul li a:hover {
   color: var(--vibrant-pink);
   border-radius: 10px;
 }
@@ -337,29 +340,6 @@ h3 {
 .footer span {
   font-size: 20px;
 }
-/* Hamburger menu for the mobile*/
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: var(--dark-gray);
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-}
 
 @media (max-width: 968px) {
   .hero-content h1 {
@@ -394,7 +374,7 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .nav ul {
+  .navbar ul {
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -427,24 +407,12 @@ h3 {
     padding: 15px;
   }
 
-  .nav {
-    padding: 10px 15px;
-  }
-
-  .nav-links {
+  .navbar {
     display: none;
-    flex-direction: column;
-    background-color: var(--bg);
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 200px;
-    border: 1px solid #333;
-    padding: 20px;
-    z-index: 1000;
   }
-
-  .nav-links.show {
-    display: flex;
+  .header,
+  cv {
+    background-position: center;
+    background-size: cover;
   }
 }
