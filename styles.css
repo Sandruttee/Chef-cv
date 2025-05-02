@@ -411,8 +411,15 @@ h3 {
     display: none;
   }
   .header,
-  cv {
+  .cv {
     background-position: center;
     background-size: cover;
+  }
+  header {
+    background-image: url("images/hero-main-small.png");
+  }
+
+  .cv {
+    background-image: url("images/basil-small.png");
   }
 }
