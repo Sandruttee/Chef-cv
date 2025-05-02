@@ -340,6 +340,7 @@ h3 {
   .glass-container {
     padding: 20px;
     margin-bottom: 60px;
+    backdrop-filter: blur(10px);
   }
 
   .btn {
