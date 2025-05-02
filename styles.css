@@ -324,7 +324,7 @@ h3 {
 
 @media (max-width: 968px) {
   .hero-content h1 {
-    font-size: 40px;
+    font-size: 60px;
   }
 
   .hero-content p,
@@ -394,13 +394,13 @@ h3 {
     background-position: center;
     min-height: 70vh;
     padding: 40px 15px;
-    background-attachment: scroll; /* fixed causes issues on mobile */
+    background-attachment: scroll;
   }
 
   .cv {
     background-image: url("images/basil-small.png");
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     padding: 60px 15px;
     background-attachment: scroll;
